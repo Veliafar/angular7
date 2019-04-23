@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsComponent implements OnInit {
 
-  addCarStatus = '';
-  inputText = '';
+  addCarStatus = false;
+  carName = '';
 
   constructor() {
   }
@@ -17,12 +17,6 @@ export class CarsComponent implements OnInit {
   }
 
   addCar() {
-    this.addCarStatus = 'Машина добавлена!';
+   this.addCarStatus = true;
   }
-
-  onKeyUp(event) {
-    console.log(event);
-    this.inputText = event.target.value;
-  }
-
 }
